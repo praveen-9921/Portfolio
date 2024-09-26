@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karan's Personal Webpage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #2D3480;
+            background: url(./night.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #2D3480;
+            color: white;
+        }
+
+        .navbar {
+            display: none;
+            flex-direction: column;
+            background-color: #2D3480;
+            position: absolute;
+            width: 100%;
+            top: 70px;
+            z-index: 1;
+        }
+
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .navbar a:hover {
+            background-color: #1b2d55;
+        }
+
+        .toggle-button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        img {
+            max-width: 200px;
+            border-radius: 50%;
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background: rgba(0, 0, 0,0.6);
+            /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(4.5px);
+            -webkit-backdrop-filter: blur(4.5px); */
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            color: white;
+        }
+
+        h2 {
+            color: rgba(173,216,230);
+            text-align: center;
+        }
+
+        .project-card {
+            position: relative;
+            width: 100%;
+            max-width: 300px;
+            margin: 10px;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-image {
+            width: 100%;
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover .project-image {
+            transform: scale(1.1);
+        }
+
+        .project-details {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(45, 52, 128, 0.8);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .project-card:hover .project-details {
+            opacity: 1;
+        }
+
+        .progress {
+            background-color: #e0e0e0;
+            border-radius: 8px;
+            margin: 5px 0;
+        }
+
+        .progress-bar {
+            height: 20px;
+            border-radius: 8px;
+            background-color: #2D3480;
+            width: 0;
+            /* You can set this in style attribute for each skill */
+            transition: width 0.5s;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #2D3480;
+            color: white;
+            position: relative;
+            bottom: 0;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            margin: 5px 0;
+            padding: 10px;
+            border: 1px solid #2D3480;
+            border-radius: 4px;
+        }
+
+        .contact-form button {
+            padding: 10px;
+            background-color: #2D3480;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #1b2d55;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Karan's Personal Webpage</h1>
+        <button class="toggle-button" onclick="toggleNavbar()">&#9776;</button>
+    </header>
+
+    <nav class="navbar" id="navbar">
+        <a href="#about">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact Me</a>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <img src="https://images.pexels.com/photos/734753/pexels-photo-734753.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Karan's Photo">
+        <p>Hello! I'm Karan, a software engineer with a passion for coding and sports. I love exploring new technologies
+            and applying them to solve real-world problems.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+            <div class="project-card">
+                <img src="https://via.placeholder.com/300x200" alt="Project 1" class="project-image">
+                <div class="project-details">
+                    <p>Project 1 Description</p>
+                    <a href="https://your-project-link.com" target="_blank">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="https://via.placeholder.com/300x200" alt="Project 2" class="project-image">
+                <div class="project-details">
+                    <p>Project 2 Description</p>
+                    <a href="https://your-project-link.com" target="_blank">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="https://via.placeholder.com/300x200" alt="Project 3" class="project-image">
+                <div class="project-details">
+                    <p>Project 3 Description</p>
+                    <a href="https://your-project-link.com" target="_blank">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <p>My key skills include:</p>
+        <div>
+            <strong>HTML</strong>
+            <div class="progress">
+                <div class="progress-bar" style="width: 90%;"></div>
+            </div>
+            <strong>CSS</strong>
+            <div class="progress">
+                <div class="progress-bar" style="width: 80%;"></div>
+            </div>
+            <strong>JavaScript</strong>
+            <div class="progress">
+                <div class="progress-bar" style="width: 75%;"></div>
+            </div>
+            <strong>C</strong>
+            <div class="progress">
+                <div class="progress-bar" style="width: 70%;"></div>
+            </div>
+            <strong>C++</strong>
+            <div class="progress">
+                <div class="progress-bar" style="width: 65%;"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form class="contact-form" action="#" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Karan. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="tel:+1234567890"><i class="fas fa-phone"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        function toggleNavbar() {
+            const navbar = document.getElementById('navbar');
+            if (navbar.style.display === 'flex') {
+                navbar.style.display = 'none';
+            } else {
+                navbar.style.display = 'flex';
+            }
+        }
+    </script>
+
+</body>
+
+</html>
