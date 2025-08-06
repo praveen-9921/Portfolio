@@ -1,0 +1,256 @@
+/* Container */
+.container {
+    position: fixed;
+    top: 3%;
+    left: 3%;
+    width: 90%;
+    margin: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    border-radius: 0 0 15px 15px;
+    /* Only round bottom corners for fixed bar */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.container:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* logo setup */
+.container .logo img {
+    height: 35px;
+    filter: brightness(1.1);
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    z-index: 1000;
+    padding: 8px 12px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    position: relative;
+    margin-left: 10px;
+}
+
+.hamburger ion-icon {
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+}
+
+.hamburger:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.hamburger:hover ion-icon {
+    color: rgba(255, 255, 255, 1);
+}
+
+.hamburger.open {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.hamburger.open ion-icon {
+    color: rgba(255, 255, 255, 1);
+}
+
+/* Navigation option */
+.container .navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+}
+
+.container .navigation li a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+.container .navigation li a:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-1px);
+}
+
+/* Contact button */
+.container .contact a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.container .contact a:hover {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.2));
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background: rgba(102, 126, 234, 0.95);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu.open {
+    border-radius: 15px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobile-nav {
+    flex-direction: column;
+    gap: 7px !important;
+    margin-bottom: 80px;
+}
+
+.mobile-nav li a {
+    margin-top: 10px;
+    font-size: 28px !important;
+    padding: 20px 40px !important;
+    border-radius: 15px !important;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    display: block;
+    text-align: center;
+    min-width: 200px;
+}
+
+.mobile-nav li a:hover {
+    background: rgba(255, 255, 255, 0.2) !important;
+    transform: scale(1.05) !important;
+}
+
+.mobile-contact {
+    margin: 10px;
+}
+
+.mobile-contact a {
+    font-size: 20px !important;
+    padding: 18px 35px !important;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.2)) !important;
+    border: 2px solid rgba(255, 255, 255, 0.4) !important;
+    min-width: 180px;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        top: 0%;
+        left: 2%;
+        width: 90%;
+        margin: 20px auto 0 auto;
+        padding: 12px 20px;
+        justify-content: space-between;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .desktop-nav,
+    .desktop-contact {
+        display: none !important;
+    }
+
+    .mobile-menu {
+        display: flex;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 88%;
+        margin: 15px auto 0 auto;
+        padding: 10px 15px;
+        justify-content: space-between;
+    }
+
+    .container .logo img {
+        height: 30px;
+    }
+
+    .hamburger {
+        padding: 6px 10px;
+        margin-left: 8px;
+    }
+
+    .hamburger ion-icon {
+        font-size: 20px;
+    }
+
+    .mobile-nav {
+        gap: 25px !important;
+        margin-bottom: 70px;
+    }
+
+    .mobile-nav li a {
+        font-size: 24px !important;
+        padding: 15px 30px !important;
+        min-width: 180px;
+    }
+
+    .mobile-contact a {
+        font-size: 18px !important;
+        padding: 15px 30px !important;
+        min-width: 160px;
+    }
+}
+
+@media (min-width: 769px) {
+    .mobile-menu {
+        display: none !important;
+    }
+}
