@@ -223,7 +223,7 @@ const App = () => {
           <ul className="navigation mobile-nav">
             <li><a href="#/" onClick={closeMenu}>Home</a></li>
             <li><a href="#about" onClick={closeMenu}>About</a></li>
-            <li><a href="skills" onClick={closeMenu}>Skills</a></li>
+            <li><a href="#skills" onClick={closeMenu}>Skills</a></li>
             <li><a href="#education" onClick={closeMenu}>Education</a></li>
             <li><a href="#projects" onClick={closeMenu}>Projects</a></li>
             <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
@@ -258,15 +258,13 @@ const App = () => {
             <h2 className="about-title">About Me</h2>
             <div className="about-text">
               <p>
-                Hi, I'm Praveen, a passionate React developer with 4+ years of experience building web applications that users love.
-                I specialize in creating scalable, maintainable code and have a keen eye for design and user experience.
+                I'm Praveen, an enthusiastic React developer eager to kickstart my career in building modern, responsive web applications. I have a strong foundation in JavaScript, React, and frontend development principles, with a passion for creating user-friendly interfaces.
               </p>
               <p>
-                When I'm not coding, you'll find me contributing to open-source projects, writing technical blog posts,
-                or exploring the latest frontend technologies. I believe in continuous learning and staying at the forefront of web development trends.
+                I enjoy exploring new frontend technologies, learning best practices, and improving my problem-solving skills through personal projects and coding challenges. I'm driven to grow my expertise and contribute fresh ideas to innovative web solutions.
               </p>
               <p>
-                I'm always excited to collaborate on challenging projects and bring innovative ideas to life through code.
+                Excited to collaborate and bring creative concepts to life through code.
               </p>
             </div>
             <div className="about-tags">

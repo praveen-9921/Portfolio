@@ -14,7 +14,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 15px 25px;
-    border-radius: 0 0 15px 15px;
+    border-radius: 15px;
     /* Only round bottom corners for fixed bar */
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
