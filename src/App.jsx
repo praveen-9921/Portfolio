@@ -453,7 +453,7 @@ const App = () => {
           <div className="footer-main">
             <div className="footer-name">Praveen Kumar</div>
             <nav className="footer-nav">
-              <a href="#home">Home</a>
+              <a href="#/">Home</a>
               <a href="#projects">Projects</a>
               <a href="#about">About</a>
               <a href="#contact">Contact</a>
