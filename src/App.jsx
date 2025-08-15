@@ -170,8 +170,8 @@ const contactData = [
     id: 4,
     icon: "globe-outline",
     label: "Portfolio",
-    value: "www.praveenkumar.dev",
-    link: "https://praveenkumar.dev"
+    value: "praveen2025.netlify.app",
+    link: "https://praveen2025.netlify.app"
   }
 ];
 
